@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>序号当前时间${date}</th>
+        <th>实例名</th>
+        <th>问题数量</th>
+    </tr>
+    </thead>
+    <tbody>
+    <#list instanceMap?keys as instanceName>
+        <tr>
+            <td>${instanceName_index+1}</td>
+            <td>${instanceName}</td>
+            <td>${instanceMap[instanceName]?size}</td>
+        </tr>
+    </#list>
+    </tbody>
+</table>
+</body>
+</html>
